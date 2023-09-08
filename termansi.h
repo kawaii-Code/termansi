@@ -8,6 +8,7 @@
 void        ansi_clearscreen();
 const char *ansi_clearscreen_str();
 
+// TODO: doesn't work
 void        ansi_cursor_setposition(int row, int col);
 void        ansi_cursor_setposition_str(int row, int col, char *buf, size_t bufLen);
 void        ansi_cursor_move(int row, int col);
@@ -23,6 +24,7 @@ void        ansi_style_italic();
 const char *ansi_style_italic_str();
 void        ansi_style_underline();
 const char *ansi_style_underline_str();
+// TODO: doesn't appear to be working
 void        ansi_style_blinking();
 const char *ansi_style_blinking_str();
 void        ansi_style_inverse();
@@ -43,7 +45,6 @@ void        ansi_color_setbackground_str(int r, int g, int b, char *buf, size_t 
 
 #endif // TERMANSI_H
 
-#define TERMANSI_IMPLEMENTATION
 #ifdef TERMANSI_IMPLEMENTATION
 
 void ansi_print(const char *string) {
